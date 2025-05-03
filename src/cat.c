@@ -23,7 +23,8 @@ void write_to_terminal(const char *msg)
 }
 
 // Simulate reading a file or stdin
-extern "C" EMSCRIPTEN_KEEPALIVE void cat(const char *arg)
+EMSCRIPTEN_KEEPALIVE
+void cat(const char *arg)
 {
     if (strcmp(arg, "-") == 0 || strlen(arg) == 0)
     {
